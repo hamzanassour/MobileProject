@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "195949468798",
+    "project_id": "quiz-7fb03",
+    "storage_bucket": "quiz-7fb03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195949468798:android:d210f69c27407a31770c2f",
+        "android_client_info": {
+          "package_name": "com.ensa.ensaquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195949468798-j1ht2rlfk2n4tmokvu3df3gikamovjeo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3qCeCt8qbpMRCitqsak6YQveyE6Siwro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195949468798-j1ht2rlfk2n4tmokvu3df3gikamovjeo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
