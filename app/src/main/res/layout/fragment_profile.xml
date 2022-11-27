@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/emailBox"
+        android:id="@+id/email_box_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -27,7 +27,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/textbox"
         android:drawableLeft="@drawable/email"
-        android:drawableTint="@color/colorPurple"
+        android:drawableTint="@color/dataCampColor"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Email Address"
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
     <EditText
-        android:id="@+id/nameBox"
+        android:id="@+id/name_box_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -46,7 +46,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/textbox"
         android:drawableLeft="@drawable/user"
-        android:drawableTint="@color/colorPurple"
+        android:drawableTint="@color/dataCampColor"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Name"
@@ -54,7 +54,7 @@
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailBox" />
+        app:layout_constraintTop_toBottomOf="@+id/email_box_text" />
 
     <EditText
         android:id="@+id/passBox"
@@ -65,7 +65,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/textbox"
         android:drawableLeft="@drawable/password"
-        android:drawableTint="@color/colorPurple"
+        android:drawableTint="@color/dataCampColor"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Password"
@@ -73,7 +73,7 @@
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameBox" />
+        app:layout_constraintTop_toBottomOf="@+id/name_box_text" />
 
     <Button
         android:id="@+id/updateBtn"

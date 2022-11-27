@@ -17,7 +17,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class QuizActivity extends AppCompatActivity {
+public class   QuizActivity extends AppCompatActivity {
 
     ActivityQuizBinding binding;
 

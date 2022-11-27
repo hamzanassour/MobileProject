@@ -19,9 +19,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class SignupActivity extends AppCompatActivity {
 
     ActivitySignupBinding binding;
-    FirebaseAuth auth;
-    FirebaseFirestore database;
-    ProgressDialog dialog;
+    FirebaseAuth firebaseAuth;
+    FirebaseFirestore firebaseFirestore;
+    ProgressDialog progressDialog;
 
 
     @Override
@@ -30,40 +30,41 @@ public class SignupActivity extends AppCompatActivity {
         binding = ActivitySignupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        auth = FirebaseAuth.getInstance();
-        database = FirebaseFirestore.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseFirestore = FirebaseFirestore.getInstance();
 
-        dialog = new ProgressDialog(this);
-        dialog.setMessage("We're creating new account...");
+        // this dialog must be showed to the user when we are creating their account
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("PLease Wait ... ");
+        progressDialog.setMessage("preparing your account");
 
 
-        binding.createNewBtn.setOnClickListener(new View.OnClickListener() {
+        binding.createNewAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email, pass, name, referCode;
+                String email, password, name;
 
-                email = binding.emailBox.getText().toString();
-                pass = binding.passwordBox.getText().toString();
-                name = binding.nameBox.getText().toString();
-                referCode = binding.referBox.getText().toString();
+                email = binding.emailBoxText.getText().toString();
+                password = binding.passwordBoxText.getText().toString();
+                name = binding.nameBoxText.getText().toString();
 
-                final User user = new User(name, email, pass, referCode);
-
-                dialog.show();
-                auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                final User user = new User(name, email, password);
+                // we can't create the ProgressDialog here because it need the context
+                progressDialog.show();
+                firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
                             String uid = task.getResult().getUser().getUid();
 
-                            database
+                            firebaseFirestore
                                     .collection("users")
                                     .document(uid)
                                     .set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()) {
-                                        dialog.dismiss();
+                                        progressDialog.dismiss();
                                         startActivity(new Intent(SignupActivity.this, MainActivity.class));
                                         finish();
                                     } else {
@@ -72,7 +73,7 @@ public class SignupActivity extends AppCompatActivity {
                                 }
                             });
                         } else {
-                            dialog.dismiss();
+                            progressDialog.dismiss();
                             Toast.makeText(SignupActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }

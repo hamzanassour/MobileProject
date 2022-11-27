@@ -15,7 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class ResultActivity extends AppCompatActivity {
 
     ActivityResultBinding binding;
-    int POINTS = 10;
+    int POINTS = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,18 +24,18 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         int correctAnswers = getIntent().getIntExtra("correct", 0);
-        int totalQuestions = getIntent().getIntExtra("total", 0);
+        int questionsNumber = getIntent().getIntExtra("total", 0);
 
         long points = correctAnswers * POINTS;
 
-        binding.score.setText(String.format("%d/%d", correctAnswers, totalQuestions));
-        binding.earnedCoins.setText(String.valueOf(points));
+        binding.score.setText(String.format("%d/%d", correctAnswers, questionsNumber));
+        binding.earnedPoints.setText(String.valueOf(points));
 
         FirebaseFirestore database = FirebaseFirestore.getInstance();
 
         database.collection("users")
                 .document(FirebaseAuth.getInstance().getUid())
-                .update("coins", FieldValue.increment(points));
+                .update("points", FieldValue.increment(points));
 
         binding.restartBtn.setOnClickListener(new View.OnClickListener() {
             @Override

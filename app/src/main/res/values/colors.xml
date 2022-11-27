@@ -4,9 +4,9 @@
     <color name="colorPrimaryDark">#673AB7</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="colorPurple">#673AB7</color>
+    <color name="dataCampColor">#05192d</color>
     <color name="colorBlue">#3F51B5</color>
-
+    <color name="colorGreen">#65ff8f</color>
     <color name="orange">#FF9800</color>
 
     <color name="darkOrange">#FF5722</color>

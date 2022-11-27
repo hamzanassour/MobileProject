@@ -18,8 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
     ActivityLoginBinding binding;
-    FirebaseAuth auth;
-    ProgressDialog dialog;
+    FirebaseAuth firebaseAuth;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +27,10 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        auth = FirebaseAuth.getInstance();
-
-        dialog = new ProgressDialog(this);
-        dialog.setMessage("Logging in...");
+        firebaseAuth = FirebaseAuth.getInstance();
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("PLease Wait");
+        progressDialog.setMessage("Logging in ...");
 
 
         //if(auth.getCurrentUser() != null) {
@@ -42,16 +42,16 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email, pass;
-                email = binding.emailBox.getText().toString();
-                pass = binding.passwordBox.getText().toString();
+                email = binding.emailBoxText.getText().toString();
+                pass = binding.passwordBoxText.getText().toString();
 
 
-                dialog.show();
+                progressDialog.show();
 
-                auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        dialog.dismiss();
+                        progressDialog.dismiss();
                         if(task.isSuccessful()) {
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             finish();
@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        binding.createNewBtn.setOnClickListener(new View.OnClickListener() {
+        binding.createNewAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, SignupActivity.class));

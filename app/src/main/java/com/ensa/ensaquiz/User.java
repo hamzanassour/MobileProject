@@ -1,17 +1,16 @@
 package com.ensa.ensaquiz;
 
 public class User {
-    private String name, email, pass,profile, referCode;
-    private long coins = 25;
+    private String name, email, pass,profile ;
+    private long points = 25;
 
     public User() {
     }
 
-    public User(String name, String email, String pass, String referCode) {
+    public User(String name, String email, String pass) {
         this.name = name;
         this.email = email;
         this.pass = pass;
-        this.referCode = referCode;
     }
 
     public String getName() {
@@ -38,20 +37,12 @@ public class User {
         this.pass = pass;
     }
 
-    public String getReferCode() {
-        return referCode;
+    public long getPoints() {
+        return points;
     }
 
-    public void setReferCode(String referCode) {
-        this.referCode = referCode;
-    }
-
-    public long getCoins() {
-        return coins;
-    }
-
-    public void setCoins(long coins) {
-        this.coins = coins;
+    public void setPoints(long points) {
+        this.points = points;
     }
 
     public String getProfile() {

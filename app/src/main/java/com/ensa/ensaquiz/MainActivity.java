@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                         transaction.commit();
                         break;
                     case 2:
-                        transaction.replace(R.id.content, new WalletFragment());
+                        transaction.replace(R.id.content, new ScoreFragment());
                         transaction.commit();
                         break;
                     case 3:
@@ -64,13 +63,5 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home_menu, menu);
         return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.wallet) {
-            Toast.makeText(this, "score is clicked.", Toast.LENGTH_SHORT).show();
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

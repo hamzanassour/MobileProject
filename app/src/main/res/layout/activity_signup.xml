@@ -11,11 +11,12 @@
         android:id="@+id/imageView"
         android:layout_width="250dp"
         android:layout_height="110dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/quizmelogo" />
+        app:srcCompat="@drawable/quiz_icon" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -44,7 +45,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="CREATE AN ACCOUNT"
-                android:textColor="@color/colorPurple"
+                android:textColor="@color/dataCampColor"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -57,7 +58,7 @@
                 android:background="@drawable/background" />
 
             <EditText
-                android:id="@+id/nameBox"
+                android:id="@+id/name_box_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -67,63 +68,49 @@
                 android:background="@drawable/textbox"
                 android:drawableLeft="@drawable/user"
                 android:drawablePadding="15dp"
-                android:drawableTint="@color/colorPurple"
+                android:drawableTint="@color/dataCampColor"
                 android:ems="10"
                 android:hint="Full Name"
                 android:inputType="textPersonName"
                 android:padding="15dp" />
 
             <EditText
-                android:id="@+id/emailBox"
+                android:id="@+id/email_box_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/textbox"
                 android:drawableLeft="@drawable/email"
                 android:drawablePadding="15dp"
-                android:drawableTint="@color/colorPurple"
+                android:drawableTint="@color/dataCampColor"
                 android:ems="10"
                 android:hint="Email Address"
                 android:inputType="textEmailAddress"
                 android:padding="15dp" />
 
             <EditText
-                android:id="@+id/passwordBox"
+                android:id="@+id/password_box_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/textbox"
                 android:drawableLeft="@drawable/password"
                 android:drawablePadding="15dp"
-                android:drawableTint="@color/colorPurple"
+                android:drawableTint="@color/dataCampColor"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="15dp" />
 
-            <EditText
-                android:id="@+id/referBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/textbox"
-                android:drawableLeft="@drawable/user"
-                android:drawablePadding="15dp"
-                android:drawableTint="@color/colorPurple"
-                android:ems="10"
-                android:hint="Refer Code"
-                android:inputType="textPersonName"
-                android:padding="15dp" />
-
             <Button
-                android:id="@+id/createNewBtn"
+                android:id="@+id/create_new_account_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/button_1"
                 android:text="Submit"
-                android:textColor="@color/color_white" />
+                android:textColor="@color/dataCampColor" />
 
             <Button
                 android:id="@+id/loginBtn"
@@ -132,9 +119,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/button_2"
+                android:background="@drawable/button_1"
                 android:text="Already have an account?"
-                android:textColor="@color/color_white" />
+                android:textColor="@color/dataCampColor" />
 
             <TextView
                 android:id="@+id/textView3"

@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.ensa.ensaquiz.databinding.FragmentWalletBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -16,9 +15,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 
-public class WalletFragment extends Fragment {
+public class ScoreFragment extends Fragment {
 
-    public WalletFragment() {
+    public ScoreFragment() {
         // Required empty public constructor
     }
 
@@ -44,16 +43,10 @@ public class WalletFragment extends Fragment {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 user = documentSnapshot.toObject(User.class);
-                binding.currentCoins.setText(String.valueOf(user.getCoins()));
-
-                //binding.currentCoins.setText(user.getCoins() + "");
+                binding.currentCoins.setText(String.valueOf(user.getPoints()));
 
             }
         });
-
-
-
-
         return binding.getRoot();
     }
 }
