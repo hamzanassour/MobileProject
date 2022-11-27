@@ -1,4 +1,4 @@
-package com.ensa.ensaquiz;
+package com.ensa.ensaquiz.service;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,17 +12,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.ensa.ensaquiz.QuizActivity;
+import com.ensa.ensaquiz.R;
+import com.ensa.ensaquiz.entities.Category;
 
 import java.util.ArrayList;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
 
     Context context;
-    ArrayList<CategoryModel> categoryModels;
+    ArrayList<Category> categories;
 
-    public CategoryAdapter(Context context, ArrayList<CategoryModel> categoryModels) {
+    public CategoryAdapter(Context context, ArrayList<Category> categories) {
         this.context = context;
-        this.categoryModels = categoryModels;
+        this.categories = categories;
     }
 
 
@@ -35,7 +38,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
-        final CategoryModel model = categoryModels.get(position);
+        final Category model = categories.get(position);
 
         holder.textView.setText(model.getCategoryName());
         Glide.with(context)
@@ -54,7 +57,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     @Override
     public int getItemCount() {
-        return categoryModels.size();
+        return categories.size();
     }
 
     public class CategoryViewHolder extends RecyclerView.ViewHolder {

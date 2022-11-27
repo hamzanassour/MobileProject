@@ -1,15 +1,16 @@
 package com.ensa.ensaquiz;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.ensa.ensaquiz.databinding.ActivityMainBinding;
+import com.ensa.ensaquiz.fragements.HomeFragment;
+import com.ensa.ensaquiz.fragements.LeaderboardsFragment;
+import com.ensa.ensaquiz.fragements.ProfileFragment;
+import com.ensa.ensaquiz.fragements.ScoreFragment;
 
 import me.ibrahimsn.lib.OnItemSelectedListener;
 

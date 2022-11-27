@@ -1,4 +1,4 @@
-package com.ensa.ensaquiz;
+package com.ensa.ensaquiz.entities;
 
 public class User {
     private String name, email, pass,profile ;

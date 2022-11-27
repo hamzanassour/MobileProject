@@ -1,4 +1,4 @@
-package com.ensa.ensaquiz;
+package com.ensa.ensaquiz.fragements;
 
 import android.os.Bundle;
 
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ensa.ensaquiz.databinding.FragmentWalletBinding;
+import com.ensa.ensaquiz.entities.User;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;

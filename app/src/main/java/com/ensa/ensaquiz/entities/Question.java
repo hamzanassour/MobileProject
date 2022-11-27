@@ -1,4 +1,4 @@
-package com.ensa.ensaquiz;
+package com.ensa.ensaquiz.entities;
 
 public class Question {
     private String question, option1, option2, option3, option4, answer;

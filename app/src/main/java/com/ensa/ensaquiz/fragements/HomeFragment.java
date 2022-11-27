@@ -1,6 +1,5 @@
-package com.ensa.ensaquiz;
+package com.ensa.ensaquiz.fragements;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -11,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ensa.ensaquiz.service.CategoryAdapter;
 import com.ensa.ensaquiz.databinding.FragmentHomeBinding;
+import com.ensa.ensaquiz.entities.Category;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -48,7 +49,7 @@ public class HomeFragment extends Fragment {
 
         database = FirebaseFirestore.getInstance();
 
-        final ArrayList<CategoryModel> categories = new ArrayList<>();
+        final ArrayList<Category> categories = new ArrayList<>();
 
         final CategoryAdapter adapter = new CategoryAdapter(getContext(), categories);
 
@@ -58,7 +59,7 @@ public class HomeFragment extends Fragment {
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                         categories.clear();
                         for (DocumentSnapshot snapshot : value.getDocuments()) {
-                            CategoryModel model = snapshot.toObject(CategoryModel.class);
+                            Category model = snapshot.toObject(Category.class);
                             model.setCategoryId(snapshot.getId());
                             categories.add(model);
                         }

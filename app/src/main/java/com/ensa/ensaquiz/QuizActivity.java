@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ensa.ensaquiz.databinding.ActivityQuizBinding;
+import com.ensa.ensaquiz.entities.Question;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;

@@ -1,4 +1,4 @@
-package com.ensa.ensaquiz;
+package com.ensa.ensaquiz.service;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.ensa.ensaquiz.R;
 import com.ensa.ensaquiz.databinding.RowLeaderboardsBinding;
+import com.ensa.ensaquiz.entities.User;
 
 import java.util.ArrayList;
 

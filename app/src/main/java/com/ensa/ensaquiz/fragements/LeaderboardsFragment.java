@@ -1,4 +1,4 @@
-package com.ensa.ensaquiz;
+package com.ensa.ensaquiz.fragements;
 
 import android.os.Bundle;
 
@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ensa.ensaquiz.service.LeaderboardsAdapter;
 import com.ensa.ensaquiz.databinding.FragmentLeaderboardsBinding;
+import com.ensa.ensaquiz.entities.User;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;

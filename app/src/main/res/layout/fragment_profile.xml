@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment" >
+    tools:context=".fragements.ProfileFragment" >
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/avatar"
+        android:src="@drawable/profile_img"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +80,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_3"
+        android:background="@drawable/button_1"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/update_profile"
         android:textColor="@color/color_white"
