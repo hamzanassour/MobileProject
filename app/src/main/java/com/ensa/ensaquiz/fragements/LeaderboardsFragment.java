@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ensa.ensaquiz.service.LeaderboardsAdapter;
+import com.ensa.ensaquiz.adapters.LeaderboardsAdapter;
 import com.ensa.ensaquiz.databinding.FragmentLeaderboardsBinding;
 import com.ensa.ensaquiz.entities.User;
 import com.google.android.gms.tasks.OnSuccessListener;

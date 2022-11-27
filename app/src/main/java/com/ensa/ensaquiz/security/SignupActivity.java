@@ -1,4 +1,4 @@
-package com.ensa.ensaquiz.auth;
+package com.ensa.ensaquiz.security;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

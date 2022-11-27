@@ -1,4 +1,4 @@
-package com.ensa.ensaquiz.auth;
+package com.ensa.ensaquiz.security;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Logging in ...");
 
 
-        //if(auth.getCurrentUser() != null) {
+        //if(security.getCurrentUser() != null) {
            // startActivity(new Intent(LoginActivity.this, MainActivity.class));
            // finish();
         //}

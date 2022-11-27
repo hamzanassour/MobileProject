@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ensa.ensaquiz.service.CategoryAdapter;
+import com.ensa.ensaquiz.adapters.CategoryAdapter;
 import com.ensa.ensaquiz.databinding.FragmentHomeBinding;
 import com.ensa.ensaquiz.entities.Category;
 import com.google.firebase.firestore.DocumentSnapshot;

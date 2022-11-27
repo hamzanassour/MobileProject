@@ -1,4 +1,4 @@
-package com.ensa.ensaquiz.service;
+package com.ensa.ensaquiz.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

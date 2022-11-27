@@ -14,8 +14,8 @@
         android:usesCleartextTraffic="true">
         <activity android:name="com.ensa.ensaquiz.ResultActivity"></activity>
         <activity android:name="com.ensa.ensaquiz.QuizActivity"></activity>
-        <activity android:name="com.ensa.ensaquiz.auth.SignupActivity"></activity>
-        <activity android:name="com.ensa.ensaquiz.auth.LoginActivity">
+        <activity android:name="com.ensa.ensaquiz.security.SignupActivity"></activity>
+        <activity android:name="com.ensa.ensaquiz.security.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
