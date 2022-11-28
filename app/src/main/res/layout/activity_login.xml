@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="Login with account"
+                android:text="Welcome Back!"
                 android:textColor="@color/dataCampColor"
                 android:textSize="24sp"
                 android:textStyle="bold" />

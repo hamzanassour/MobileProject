@@ -9,21 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ensa.ensaquiz.R;
-import com.ensa.ensaquiz.databinding.FragmentProfileBinding;
-import com.ensa.ensaquiz.entities.User;
+import com.ensa.ensaquiz.databinding.FragmentUpdateBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 
-public class ProfileFragment extends Fragment {
+public class UpdateFragment extends Fragment {
 
 
-    FragmentProfileBinding binding ;
+    FragmentUpdateBinding binding ;
     FirebaseAuth firebaseAuth ;
     FirebaseFirestore firebaseFirestore;
-    public ProfileFragment() {
+    public UpdateFragment() {
         // Required empty public constructor
     }
 
@@ -59,6 +57,6 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return inflater.inflate(R.layout.fragment_update, container, false);
     }
 }

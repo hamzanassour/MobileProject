@@ -15,12 +15,12 @@ import com.ensa.ensaquiz.entities.User;
 
 import java.util.ArrayList;
 
-public class LeaderboardsAdapter extends RecyclerView.Adapter<LeaderboardsAdapter.LeaderboardViewHolder> {
+public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.LeaderboardViewHolder> {
 
     Context context;
     ArrayList<User> users;
 
-    public LeaderboardsAdapter(Context context, ArrayList<User> users) {
+    public DashboardAdapter(Context context, ArrayList<User> users) {
         this.context = context;
         this.users = users;
     }

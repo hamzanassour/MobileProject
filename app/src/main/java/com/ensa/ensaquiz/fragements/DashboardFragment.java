@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ensa.ensaquiz.adapters.LeaderboardsAdapter;
-import com.ensa.ensaquiz.databinding.FragmentLeaderboardsBinding;
+import com.ensa.ensaquiz.adapters.DashboardAdapter;
+import com.ensa.ensaquiz.databinding.FragmentDashboardBinding;
 import com.ensa.ensaquiz.entities.User;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -21,11 +21,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 
-public class LeaderboardsFragment extends Fragment {
+public class DashboardFragment extends Fragment {
 
 
 
-    public LeaderboardsFragment() {
+    public DashboardFragment() {
         // Required empty public constructor
     }
 
@@ -36,18 +36,18 @@ public class LeaderboardsFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    FragmentLeaderboardsBinding binding;
+    FragmentDashboardBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentLeaderboardsBinding.inflate(inflater, container, false);
+        binding = FragmentDashboardBinding.inflate(inflater, container, false);
 
         FirebaseFirestore database = FirebaseFirestore.getInstance();
 
         final ArrayList<User> users = new ArrayList<>();
-        final LeaderboardsAdapter adapter = new LeaderboardsAdapter(getContext(), users);
+        final DashboardAdapter adapter = new DashboardAdapter(getContext(), users);
 
         binding.recyclerView.setAdapter(adapter);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

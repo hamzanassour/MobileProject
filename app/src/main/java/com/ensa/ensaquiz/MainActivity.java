@@ -8,8 +8,8 @@ import android.view.Menu;
 
 import com.ensa.ensaquiz.databinding.ActivityMainBinding;
 import com.ensa.ensaquiz.fragements.HomeFragment;
-import com.ensa.ensaquiz.fragements.LeaderboardsFragment;
-import com.ensa.ensaquiz.fragements.ProfileFragment;
+import com.ensa.ensaquiz.fragements.DashboardFragment;
+import com.ensa.ensaquiz.fragements.UpdateFragment;
 import com.ensa.ensaquiz.fragements.ScoreFragment;
 
 import me.ibrahimsn.lib.OnItemSelectedListener;
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                         transaction.commit();
                         break;
                     case 1:
-                        transaction.replace(R.id.content, new LeaderboardsFragment());
+                        transaction.replace(R.id.content, new DashboardFragment());
                         transaction.commit();
                         break;
                     case 2:
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         transaction.commit();
                         break;
                     case 3:
-                        transaction.replace(R.id.content, new ProfileFragment());
+                        transaction.replace(R.id.content, new UpdateFragment());
                         transaction.commit();
                         break;
                 }

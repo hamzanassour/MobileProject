@@ -130,7 +130,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:text="By signing up you agree to our privacy policy and terms and conditions."
+                android:text="you are accepting our terms and conditions"
                 android:textSize="10sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
