@@ -23,36 +23,27 @@ import java.util.ArrayList;
 
 
 public class HomeFragment extends Fragment {
-
-
     public HomeFragment() {
-        // Required empty public constructor
+
     }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     FragmentHomeBinding binding;
     FirebaseFirestore database;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-
         database = FirebaseFirestore.getInstance();
-
         final ArrayList<Category> categories = new ArrayList<>();
-
         final CategoryAdapter adapter = new CategoryAdapter(getContext(), categories);
-
+        // check the categories document in firebase
         database.collection("categories")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
@@ -67,11 +58,9 @@ public class HomeFragment extends Fragment {
                     }
                 });
 
-
+        // Layout 2 category par row
         binding.categoryList.setLayoutManager(new GridLayoutManager(getContext(),2));
         binding.categoryList.setAdapter(adapter);
-
-
 
         // Inflate the layout for this fragment
         return binding.getRoot();

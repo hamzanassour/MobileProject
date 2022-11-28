@@ -59,6 +59,7 @@ public class SignupActivity extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             String uid = task.getResult().getUser().getUid();
 
+
                             firebaseFirestore
                                     .collection("users")
                                     .document(uid)
@@ -70,13 +71,17 @@ public class SignupActivity extends AppCompatActivity {
                                         startActivity(new Intent(SignupActivity.this, MainActivity.class));
                                         finish();
                                     } else {
-                                        Toast.makeText(SignupActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(SignupActivity.this, task.getException()
+                                                .getLocalizedMessage(),
+                                                Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
                         } else {
                             progressDialog.dismiss();
-                            Toast.makeText(SignupActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignupActivity.this, task.getException()
+                                    .getLocalizedMessage(),
+                                    Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

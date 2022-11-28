@@ -19,7 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
 
-    // instead of using findViewById we are using the generated binding class ex : for login_activity.xml we hava ActivityLoginBinding we can find it in  build package
+    // instead of using findViewById we are using the generated binding class
+    // ex : for login_activity.xml we hava ActivityLoginBinding we can find it in  build package
     // this class will have some references presented in xml file (attribute name take the id of the view in the xml file )
     ActivityLoginBinding activityLoginBinding;
     FirebaseAuth firebaseAuth; // from Firebase SDK

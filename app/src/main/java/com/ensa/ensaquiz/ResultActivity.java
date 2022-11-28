@@ -35,7 +35,7 @@ public class ResultActivity extends AppCompatActivity {
 
         database.collection("users")
                 .document(FirebaseAuth.getInstance().getUid())
-                .update("points", FieldValue.increment(points));
+                .update("points", FieldValue.increment(points) );
 
         binding.restartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
