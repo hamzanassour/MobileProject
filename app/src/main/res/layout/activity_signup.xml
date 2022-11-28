@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/quiz_icon" />
+        app:srcCompat="@drawable/app_logo" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/textbox"
-                android:drawableLeft="@drawable/email"
+                android:drawableLeft="@drawable/email_icone"
                 android:drawablePadding="15dp"
                 android:drawableTint="@color/dataCampColor"
                 android:ems="10"
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/textbox"
-                android:drawableLeft="@drawable/password"
+                android:drawableLeft="@drawable/password_icone"
                 android:drawablePadding="15dp"
                 android:drawableTint="@color/dataCampColor"
                 android:ems="10"

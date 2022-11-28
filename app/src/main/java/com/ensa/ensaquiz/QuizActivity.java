@@ -99,13 +99,13 @@ public class   QuizActivity extends AppCompatActivity {
 
     void showAnswer() {
         if(question.getAnswer().equals(binding.option1.getText().toString()))
-            binding.option1.setBackground(getResources().getDrawable(R.drawable.option_right));
+            binding.option1.setBackground(getResources().getDrawable(R.drawable.right_choice));
         else if(question.getAnswer().equals(binding.option2.getText().toString()))
-            binding.option2.setBackground(getResources().getDrawable(R.drawable.option_right));
+            binding.option2.setBackground(getResources().getDrawable(R.drawable.right_choice));
         else if(question.getAnswer().equals(binding.option3.getText().toString()))
-            binding.option3.setBackground(getResources().getDrawable(R.drawable.option_right));
+            binding.option3.setBackground(getResources().getDrawable(R.drawable.right_choice));
         else if(question.getAnswer().equals(binding.option4.getText().toString()))
-            binding.option4.setBackground(getResources().getDrawable(R.drawable.option_right));
+            binding.option4.setBackground(getResources().getDrawable(R.drawable.right_choice));
     }
 
     void setNextQuestion() {
@@ -128,18 +128,18 @@ public class   QuizActivity extends AppCompatActivity {
         String selectedAnswer = textView.getText().toString();
         if(selectedAnswer.equals(question.getAnswer())) {
             correctAnswers++;
-            textView.setBackground(getResources().getDrawable(R.drawable.option_right));
+            textView.setBackground(getResources().getDrawable(R.drawable.right_choice));
         } else {
             showAnswer();
-            textView.setBackground(getResources().getDrawable(R.drawable.option_wrong));
+            textView.setBackground(getResources().getDrawable(R.drawable.wrong_choice));
         }
     }
 
     void reset() {
-        binding.option1.setBackground(getResources().getDrawable(R.drawable.option_unselected));
-        binding.option2.setBackground(getResources().getDrawable(R.drawable.option_unselected));
-        binding.option3.setBackground(getResources().getDrawable(R.drawable.option_unselected));
-        binding.option4.setBackground(getResources().getDrawable(R.drawable.option_unselected));
+        binding.option1.setBackground(getResources().getDrawable(R.drawable.no_option_selected_color));
+        binding.option2.setBackground(getResources().getDrawable(R.drawable.no_option_selected_color));
+        binding.option3.setBackground(getResources().getDrawable(R.drawable.no_option_selected_color));
+        binding.option4.setBackground(getResources().getDrawable(R.drawable.no_option_selected_color));
     }
 
     public void onClick(View view) {

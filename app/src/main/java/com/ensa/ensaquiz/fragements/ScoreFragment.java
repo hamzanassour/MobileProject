@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ensa.ensaquiz.databinding.FragmentWalletBinding;
+import com.ensa.ensaquiz.databinding.FragmentScoreBinding;
 import com.ensa.ensaquiz.entities.User;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class ScoreFragment extends Fragment {
 
     public ScoreFragment() {
-        // Required empty public constructor
+
     }
 
     @Override
@@ -27,15 +27,16 @@ public class ScoreFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    FragmentWalletBinding binding;
+    FragmentScoreBinding binding;
     FirebaseFirestore database;
     User user;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
-        binding = FragmentWalletBinding.inflate(inflater, container, false);
+
+
+        binding = FragmentScoreBinding.inflate(inflater, container, false);
         database = FirebaseFirestore.getInstance();
 
         database.collection("users")

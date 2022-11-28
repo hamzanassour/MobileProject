@@ -30,7 +30,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/readme" />
+                app:srcCompat="@drawable/category_item_image" />
 
             <TextView
                 android:id="@+id/category"
