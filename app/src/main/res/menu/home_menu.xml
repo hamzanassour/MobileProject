@@ -2,7 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <item android:title="Score"
-    android:icon="@drawable/score_icon"
-    android:id="@+id/score"
+    android:icon="@drawable/logout_icon"
+    android:id="@+id/logout"
+
     app:showAsAction="always"/>
+
+
 </menu>

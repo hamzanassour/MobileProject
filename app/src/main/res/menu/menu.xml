@@ -7,7 +7,7 @@
         android:title="Rank"
         android:icon="@drawable/rank_fragment_icone"/>
 
-    <item android:id="@+id/wallet"
+    <item android:id="@+id/score"
         android:title="Score"
         android:icon="@drawable/score_icon"/>
 
