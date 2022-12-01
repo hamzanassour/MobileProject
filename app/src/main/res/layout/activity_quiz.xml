@@ -185,6 +185,7 @@
         android:layout_marginRight="8dp"
         android:background="@drawable/button_1"
         android:text="Quit"
+        android:onClick="onClick"
         android:textColor="@color/color_white"
         app:layout_constraintEnd_toStartOf="@+id/nextBtn"
         app:layout_constraintHorizontal_bias="0.5"

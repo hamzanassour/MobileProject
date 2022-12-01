@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.ensa.ensaquiz.databinding.ActivityQuizBinding;
 import com.ensa.ensaquiz.entities.Question;
+import com.ensa.ensaquiz.fragements.HomeFragment;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -156,9 +157,9 @@ public class   QuizActivity extends AppCompatActivity {
                 break;
             case R.id.nextBtn:
                 reset();
-                if(index <= questions.size()) {
-                    index++;
+                if(index < questions.size()) {
                     setNextQuestion();
+                    index++;
                 } else {
                     Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
                     intent.putExtra("correct", correctAnswers);
@@ -167,6 +168,14 @@ public class   QuizActivity extends AppCompatActivity {
                     //Toast.makeText(this, "Quiz Finished.", Toast.LENGTH_SHORT).show();
                 }
                 break;
+
+            case R.id.quizBtn:
+
+                Intent intent = new Intent(QuizActivity.this, HomeFragment.class);
+                startActivity(intent);
+
+                break;
+
         }
     }
 
